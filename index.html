@@ -21,7 +21,7 @@
                You are given a random number to begin the game.
             </p>
             <p>
-               Each crystal below is worth a random value. Clicking on any crystal gives that specific crystal's value to your score.
+               Each crystal below is worth a random value. Clicking on any crystal adds that specific crystal's value to your score.
             </p>
             <p>
                The goal of the game is to match your score to the target score. If your score goes over the target score, you lose.
@@ -34,8 +34,8 @@
             </p>
          </div>
       </div>
-      <br><br>
-      <div id="scoreTarget">Target Score</div>
+      <hr><br>
+      <div id="scoreTarget">Target Score: </div>
       <br>
       <div id="crystals">
          <img src="assets/images/crystalRed.jpg" alt="red crystal" width=200px>
@@ -44,9 +44,12 @@
          <img src="assets/images/crystalPepsi.jpg" alt="red crystal" width=200px>
       </div>
       <br>
-      <div id="scoreCurrent">Current Score</div>
+      <div id="scoreCurrent">Current Score: </div>
       <br>
-      <div id="scoreTally">Tally</div>  
+      <div id="scoreTally">
+         <div>Wins: <span id="totalWins"></span></div>
+         <div>Losses: <span id="totalLosses"></span></div>
+      </div>  
    </div>
    
 </body>
