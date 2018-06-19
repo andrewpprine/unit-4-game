@@ -1,3 +1,28 @@
+@media only screen and (max-width: 980px) {
+   #crystals img{
+      width: 150px;
+      height: 150px;
+   }
+}
+@media only screen and (max-width: 768px) {
+   #crystals img{
+      width: 125px;
+      height: 125px;
+   }
+}
+@media only screen and (max-width: 640px) {
+   #crystals img{
+      width: 100px;
+      height: 100px;
+   }
+}
+@media only screen and (max-width: 500px) {
+   #crystals img{
+      width: 80px;
+      height: 80px;
+   }
+}
+
 body {
    color: white;
    background-image: url("../images/crystalWallpaper.jpeg");
@@ -7,42 +32,35 @@ body {
    text-align: center;
    margin: 20px 40px;
 }
-
 #title {
    font-family: 'Bangers', cursive;
    font-size: 80px;
    border: 3px solid white;
    padding: 5px;
    background: linear-gradient(to right, red,orange,green,blue,indigo); 
-
 }
 #directions {
-   font-family: 'Patrick Hand', cursive;
    font-size: 20px;
    margin: 20px 20%;
-
 }
 #directions h2 {
+   font-size: 25px;
    text-decoration-line: underline;
 }
 #directions p{
    padding: 4px;
 }
-
 #scoreTarget {
    font-size: 30px;
    color: #d93437;
 }
-
 #crystals img{
    border-radius: 30%;
 }
-
 #scoreCurrent {
    font-size: 30px;
    color: #2dc937;
 }
-
 #scoreTally {
    font-size: 20px;
 }

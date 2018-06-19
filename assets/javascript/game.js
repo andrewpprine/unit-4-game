@@ -1,5 +1,7 @@
 var ranNumTarget = Math.ceil(Math.random()*(120-19)+19);
+console.log(ranNumTarget);
 var ranNumCrystal = Math.ceil(Math.random()*(12-1)+1);
+console.log(ranNumCrystal);
 var totalWins
 var totalLosses
 
