@@ -14,12 +14,19 @@ body {
    background: linear-gradient(to right, red,orange,green,blue,indigo); 
 
 }
-#directions p {
+#directions {
    font-size: 20px;
+   margin: 20px 20%;
+}
+#directions h2 {
+   text-decoration-line: underline;
+}
+#directions p{
+   padding: 4px;
 }
 
 #scoreTarget {
-
+   font-size: 30px;
 }
 
 #crystals {
@@ -27,9 +34,9 @@ body {
 }
 
 #scoreCurrent {
-
+   font-size: 30px;
 }
 
 #tally {
-
+   font-size: 20px;
 }
