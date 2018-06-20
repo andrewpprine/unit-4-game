@@ -50,14 +50,14 @@ body {
 #directions p{
    padding: 4px;
 }
-#scoreTarget {
+#targetScore {
    font-size: 30px;
    color: #d93437;
 }
 #crystals img{
    border-radius: 30%;
 }
-#scoreCurrent {
+#currentScore {
    font-size: 30px;
    color: #2dc937;
 }
