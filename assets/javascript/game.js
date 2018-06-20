@@ -1,40 +1,39 @@
-//upon new game, assign values to crystals
-//upon new game, assign target score
-
-//after clicking crystal, add value to current score
-
-
-//if player wins, add 1 to totalWins
-//if player loses, add 1 to totalLosses
-
 $(document).ready(function(){
-   var ranNumTarget = Math.ceil(Math.random()*(120-19)+19);
+//waits for page to load and then assigns random values
+   var scoreTarget = Math.ceil(Math.random()*(120-19)+19);
    var crystal1 = Math.ceil(Math.random()*(12-1)+1);
    var crystal2 = Math.ceil(Math.random()*(12-1)+1);
    var crystal3 = Math.ceil(Math.random()*(12-1)+1);
    var crystal4 = Math.ceil(Math.random()*(12-1)+1);
+   //score and counter variables
    var totalWins = 0;
    var totalLosses = 0;
    var scoreCurrent = 0;
-   $('#scoreTarget').text(ranNumTarget);
+   $('#scoreTarget').text(scoreTarget);
 
 
    $(".crystal").click(function(){
-      console.log("you clicked something");
+      //cheat mode - console.log(crystal1,crystal2,crystal3,crystal4);
+
+      //sets win/loss tally after first game starts
       $('#totalWins').text(totalWins);
       $('#totalLosses').text(totalLosses);
    });
 
    function reset(){
-      ranNumTarget;
+   //changes all the random values and resets player/current score to 0
+      scoreTarget = Math.ceil(Math.random()*(120-19)+19);
+      $('#scoreTarget').text(scoreTarget);
       crystal1 = Math.ceil(Math.random()*(12-1)+1);
       crystal2 = Math.ceil(Math.random()*(12-1)+1);
       crystal3 = Math.ceil(Math.random()*(12-1)+1);
       crystal4 = Math.ceil(Math.random()*(12-1)+1);
       scoreCurrent = 0;
+      $('#scoreCurrent').text(scoreCurrent);
    };
    
    function winner(){
+   //if player wins, adds 1 to win counter and resets the game values
          alert("WINNER WINNER CHICKEN DINNER!");
          totalWins++;
          $('#totalWins').text(totalWins);
@@ -42,19 +41,21 @@ $(document).ready(function(){
    };
 
    function loser(){
+   //if player loses, adds 1 to loss counter and resets the game values
          alert("You lost. Pity.");
          totalLosses++;
          $('#totalLosses').text(totalLosses);
          reset();
    };
 
+   //the next four functions perform the same function for each of the four crystals: adds that crystal's value to score and check to see if the player has won or lost yet (otherwise game continues)
    $('#crystal1').on('click', function(){
       console.log(crystal1);
       scoreCurrent = scoreCurrent + crystal1;
       $('#scoreCurrent').text(scoreCurrent);
-      if (scoreCurrent == ranNumTarget){
+      if (scoreCurrent == scoreTarget){
          winner();
-      }else if (scoreCurrent > ranNumTarget){
+      }else if (scoreCurrent > scoreTarget){
          loser();
       }
    });
@@ -62,9 +63,9 @@ $(document).ready(function(){
       console.log(crystal2);
       scoreCurrent = scoreCurrent + crystal2;
       $('#scoreCurrent').text(scoreCurrent);
-      if (scoreCurrent == ranNumTarget){
+      if (scoreCurrent == scoreTarget){
          winner();
-      }else if (scoreCurrent > ranNumTarget){
+      }else if (scoreCurrent > scoreTarget){
          loser();
       }
    });
@@ -72,9 +73,9 @@ $(document).ready(function(){
       console.log(crystal3);
       scoreCurrent = scoreCurrent + crystal3;
       $('#scoreCurrent').text(scoreCurrent);
-      if (scoreCurrent == ranNumTarget){
+      if (scoreCurrent == scoreTarget){
          winner();
-      }else if (scoreCurrent > ranNumTarget){
+      }else if (scoreCurrent > scoreTarget){
          loser();
       }
    });
@@ -82,64 +83,10 @@ $(document).ready(function(){
       console.log(crystal4);
       scoreCurrent = scoreCurrent + crystal4;
       $('#scoreCurrent').text(scoreCurrent);
-      if (scoreCurrent == ranNumTarget){
+      if (scoreCurrent == scoreTarget){
          winner();
-      }else if (scoreCurrent > ranNumTarget){
+      }else if (scoreCurrent > scoreTarget){
          loser();
       }
    });
-   
 });
-
-
-// $( document ).ready(function(){
-
-//  //sets up click for jewels
-//    $('#one').on ('click', function(){
-//      userTotal = userTotal + num1;
-//      console.log("New userTotal= " + userTotal);
-//      $('#finalTotal').text(userTotal); 
-//            //sets win/lose conditions
-//          if (userTotal == Random){
-//            yay();
-//          }
-//          else if ( userTotal > Random){
-//            loser();
-//          }   
-//    })  
-//    $('#two').on ('click', function(){
-//      userTotal = userTotal + num2;
-//      console.log("New userTotal= " + userTotal);
-//      $('#finalTotal').text(userTotal); 
-//          if (userTotal == Random){
-//            yay();
-//          }
-//          else if ( userTotal > Random){
-//            loser();
-//          } 
-//    })  
-//    $('#three').on ('click', function(){
-//      userTotal = userTotal + num3;
-//      console.log("New userTotal= " + userTotal);
-//      $('#finalTotal').text(userTotal);
-//  //sets win/lose conditions
-//            if (userTotal == Random){
-//            yay();
-//          }
-//          else if ( userTotal > Random){
-//            loser();
-//          } 
-//    })  
-//    $('#four').on ('click', function(){
-//      userTotal = userTotal + num4;
-//      console.log("New userTotal= " + userTotal);
-//      $('#finalTotal').text(userTotal); 
-       
-//            if (userTotal == Random){
-//            yay();
-//          }
-//          else if ( userTotal > Random){
-//            loser();
-//          }
-//    });   
-//  }); 
