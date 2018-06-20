@@ -12,12 +12,11 @@ $(document).ready(function(){
    $('#scoreTarget').text(scoreTarget);
 
 
-   $(".crystal").click(function(){
-      //cheat mode - console.log(crystal1,crystal2,crystal3,crystal4);
-
-      //sets win/loss tally after first game starts
+   $(".crystal").click(function(){  
+   //sets win/loss tally after first game starts
       $('#totalWins').text(totalWins);
       $('#totalLosses').text(totalLosses);
+      //cheat mode - console.log(crystal1,crystal2,crystal3,crystal4);
    });
 
    function reset(){
